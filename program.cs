@@ -11,17 +11,37 @@ namespace СSharpGeekBrains
             Console.WriteLine("Введите число элементов массива");
             N = Int32.Parse(Console.ReadLine());
 
-            string[] words = new string[N];
+            string[] A = new string[N];
 
             Console.WriteLine("Введите элементы массива");
 
-            from (int i = 0, i < N, i++)
+            for (int i = 0; i < N; i++)
             {
-                words[i] = ReadLine();
+                A[i] = Console.ReadLine();
             }
 
+            string[] B = new string[N];
 
+            int j = 0;
 
+            for (int i = 0; i < N; i++)
+            {
+                if (A[i].Length < 4)
+                {
+                    B[j] = A[i];
+                    j++;
+                }
+            }
+
+            for (int i = 0; i < j; i++)
+            {
+                Console.Write(B[i]);
+
+                if (i != j - 1)
+                {
+                    Console.Write(", ");
+                }
+            }
         }
     }
 }
