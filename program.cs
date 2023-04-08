@@ -20,6 +20,7 @@ namespace СSharpGeekBrains
                 A[i] = Console.ReadLine();
             }
 
+
             string[] B = new string[N];
 
             int j = 0;
